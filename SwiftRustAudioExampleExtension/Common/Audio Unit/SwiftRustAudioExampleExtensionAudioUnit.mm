@@ -10,9 +10,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreAudioKit/AUViewController.h>
 
-#import "SwiftRustAudioExampleExtensionAUProcessHelper.hpp"
-#import "SwiftRustAudioExampleExtensionDSPKernel.hpp"
-
 #import "swift-rust-ffi.h"
 
 // Define parameter addresses.
@@ -27,8 +24,6 @@
 
 @implementation SwiftRustAudioExampleExtensionAudioUnit {
     // C++ members need to be ivars; they would be copied on access if they were properties.
-    SwiftRustAudioExampleExtensionDSPKernel _kernel;
-    std::unique_ptr<AUProcessHelper> _processHelper;
     Sine* _sine;
 }
 
@@ -63,28 +58,11 @@
 - (void)setupParameterTree:(AUParameterTree *)parameterTree {
     _parameterTree = parameterTree;
 
-    // Send the Parameter default values to the Kernel before setting up the parameter callbacks, so that the defaults set in the Kernel.hpp don't propagate back to the AUParameters via GetParameter
-    for (AUParameter *param in _parameterTree.allParameters) {
-        _kernel.setParameter(param.address, param.value);
-    }
-
     [self setupParameterCallbacks];
 }
 
 - (void)setupParameterCallbacks {
     // Make a local pointer to the kernel to avoid capturing self.
-
-    __block SwiftRustAudioExampleExtensionDSPKernel *kernel = &_kernel;
-
-    // implementorValueObserver is called when a parameter changes value.
-    _parameterTree.implementorValueObserver = ^(AUParameter *param, AUValue value) {
-        kernel->setParameter(param.address, value);
-    };
-
-    // implementorValueProvider is called when the value needs to be refreshed.
-    _parameterTree.implementorValueProvider = ^(AUParameter *param) {
-        return kernel->getParameter(param.address);
-    };
 
     // A function to provide string representations of parameter values.
     _parameterTree.implementorStringFromValueCallback = ^(AUParameter *param, const AUValue *__nullable valuePtr) {
@@ -96,14 +74,6 @@
 
 #pragma mark - AUAudioUnit Overrides
 
-- (AUAudioFrameCount)maximumFramesToRender {
-    return _kernel.maximumFramesToRender();
-}
-
-- (void)setMaximumFramesToRender:(AUAudioFrameCount)maximumFramesToRender {
-    _kernel.setMaximumFramesToRender(maximumFramesToRender);
-}
-
 // An audio unit's audio output connection points.
 // Subclassers must override this property getter and should return the same object every time.
 // See sample code.
@@ -111,21 +81,11 @@
     return _outputBusArray;
 }
 
-- (void)setShouldBypassEffect:(BOOL)shouldBypassEffect {
-    _kernel.setBypass(shouldBypassEffect);
-}
-
-- (BOOL)shouldBypassEffect {
-    return _kernel.isBypassed();
-}
-
 // Allocate resources required to render.
 // Subclassers should call the superclass implementation.
 - (BOOL)allocateRenderResourcesAndReturnError:(NSError **)outError {
     const auto outputChannelCount = [self.outputBusses objectAtIndexedSubscript:0].format.channelCount;
 
-    _kernel.initialize(outputChannelCount, _outputBus.format.sampleRate);
-    _processHelper = std::make_unique<AUProcessHelper>(_kernel, outputChannelCount);
     return [super allocateRenderResourcesAndReturnError:outError];
 }
 
@@ -134,8 +94,6 @@
 - (void)deallocateRenderResources {
 
     // Deallocate your resources.
-    _kernel.deInitialize();
-
     [super deallocateRenderResources];
 }
 
@@ -147,9 +105,6 @@
      Capture in locals to avoid ObjC member lookups. If "self" is captured in
      render, we're doing it wrong.
      */
-    // Specify captured objects are mutable.
-    __block SwiftRustAudioExampleExtensionDSPKernel *kernel = &_kernel;
-    __block std::unique_ptr<AUProcessHelper> &processHelper = _processHelper;
 
     return ^AUAudioUnitStatus(AudioUnitRenderActionFlags 				*actionFlags,
                               const AudioTimeStamp       				*timestamp,
@@ -167,8 +122,6 @@
 
         return noErr;
     };
-
 }
 
 @end
-

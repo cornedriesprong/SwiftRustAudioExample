@@ -28,9 +28,7 @@
 		97B015A12B1359DD00306A5B /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015A02B1359DD00306A5B /* CrossPlatform.swift */; };
 		97B015A32B1359DD00306A5B /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015A22B1359DD00306A5B /* String+Utils.swift */; };
 		97B015A72B1359DD00306A5B /* SwiftRustAudioExampleExtensionAudioUnit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97B015A62B1359DD00306A5B /* SwiftRustAudioExampleExtensionAudioUnit.mm */; };
-		97B015AA2B1359DD00306A5B /* SwiftRustAudioExampleExtensionAUProcessHelper.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 97B015A92B1359DD00306A5B /* SwiftRustAudioExampleExtensionAUProcessHelper.hpp */; };
 		97B015AE2B1359DD00306A5B /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015AD2B1359DD00306A5B /* Parameters.swift */; };
-		97B015B22B1359DD00306A5B /* SwiftRustAudioExampleExtensionDSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 97B015B12B1359DD00306A5B /* SwiftRustAudioExampleExtensionDSPKernel.hpp */; };
 		97B015B52B1359DD00306A5B /* SwiftRustAudioExampleExtensionMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015B42B1359DD00306A5B /* SwiftRustAudioExampleExtensionMainView.swift */; };
 		97B015B72B1359DD00306A5B /* ParameterSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015B62B1359DD00306A5B /* ParameterSlider.swift */; };
 		97B015BC2B1359DD00306A5B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B015BA2B1359DD00306A5B /* MainInterface.storyboard */; };
@@ -106,11 +104,8 @@
 		97B015A22B1359DD00306A5B /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		97B015A52B1359DD00306A5B /* SwiftRustAudioExampleExtensionAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftRustAudioExampleExtensionAudioUnit.h; sourceTree = "<group>"; };
 		97B015A62B1359DD00306A5B /* SwiftRustAudioExampleExtensionAudioUnit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SwiftRustAudioExampleExtensionAudioUnit.mm; sourceTree = "<group>"; };
-		97B015A92B1359DD00306A5B /* SwiftRustAudioExampleExtensionAUProcessHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SwiftRustAudioExampleExtensionAUProcessHelper.hpp; sourceTree = "<group>"; };
 		97B015AC2B1359DD00306A5B /* SwiftRustAudioExampleExtensionParameterAddresses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftRustAudioExampleExtensionParameterAddresses.h; sourceTree = "<group>"; };
 		97B015AD2B1359DD00306A5B /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
-		97B015B02B1359DD00306A5B /* SinOscillator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SinOscillator.h; sourceTree = "<group>"; };
-		97B015B12B1359DD00306A5B /* SwiftRustAudioExampleExtensionDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SwiftRustAudioExampleExtensionDSPKernel.hpp; sourceTree = "<group>"; };
 		97B015B42B1359DD00306A5B /* SwiftRustAudioExampleExtensionMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRustAudioExampleExtensionMainView.swift; sourceTree = "<group>"; };
 		97B015B62B1359DD00306A5B /* ParameterSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterSlider.swift; sourceTree = "<group>"; };
 		97B015BB2B1359DD00306A5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MainInterface.storyboard; sourceTree = "<group>"; };
@@ -276,7 +271,6 @@
 				97B015C12B1359DD00306A5B /* Info.plist */,
 				97B0159A2B1359DD00306A5B /* Common */,
 				97B015AB2B1359DD00306A5B /* Parameters */,
-				97B015AF2B1359DD00306A5B /* DSP */,
 				97B015B32B1359DD00306A5B /* UI */,
 			);
 			path = SwiftRustAudioExampleExtension;
@@ -290,7 +284,6 @@
 				97B0159C2B1359DD00306A5B /* Parameters */,
 				97B0159F2B1359DD00306A5B /* Utility */,
 				97B015A42B1359DD00306A5B /* Audio Unit */,
-				97B015A82B1359DD00306A5B /* DSP */,
 				97B015B82B1359DD00306A5B /* UI */,
 			);
 			path = Common;
@@ -322,14 +315,6 @@
 			path = "Audio Unit";
 			sourceTree = "<group>";
 		};
-		97B015A82B1359DD00306A5B /* DSP */ = {
-			isa = PBXGroup;
-			children = (
-				97B015A92B1359DD00306A5B /* SwiftRustAudioExampleExtensionAUProcessHelper.hpp */,
-			);
-			path = DSP;
-			sourceTree = "<group>";
-		};
 		97B015AB2B1359DD00306A5B /* Parameters */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,15 +322,6 @@
 				97B015AD2B1359DD00306A5B /* Parameters.swift */,
 			);
 			path = Parameters;
-			sourceTree = "<group>";
-		};
-		97B015AF2B1359DD00306A5B /* DSP */ = {
-			isa = PBXGroup;
-			children = (
-				97B015B02B1359DD00306A5B /* SinOscillator.h */,
-				97B015B12B1359DD00306A5B /* SwiftRustAudioExampleExtensionDSPKernel.hpp */,
-			);
-			path = DSP;
 			sourceTree = "<group>";
 		};
 		97B015B32B1359DD00306A5B /* UI */ = {
@@ -535,9 +511,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97B015AA2B1359DD00306A5B /* SwiftRustAudioExampleExtensionAUProcessHelper.hpp in Resources */,
 				97B015BC2B1359DD00306A5B /* MainInterface.storyboard in Resources */,
-				97B015B22B1359DD00306A5B /* SwiftRustAudioExampleExtensionDSPKernel.hpp in Resources */,
 				97B015992B1359DD00306A5B /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

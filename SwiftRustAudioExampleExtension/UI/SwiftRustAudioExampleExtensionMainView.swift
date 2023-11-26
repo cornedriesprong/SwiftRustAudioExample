@@ -11,6 +11,6 @@ struct SwiftRustAudioExampleExtensionMainView: View {
     var parameterTree: ObservableAUParameterGroup
     
     var body: some View {
-        ParameterSlider(param: parameterTree.global.gain)
+        Text("Hello World!")
     }
 }
