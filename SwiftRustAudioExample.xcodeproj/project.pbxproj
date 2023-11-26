@@ -1,0 +1,978 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		97B0155A2B1359DB00306A5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015592B1359DB00306A5B /* ContentView.swift */; };
+		97B0155E2B1359DB00306A5B /* ViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B0155D2B1359DB00306A5B /* ViewControllerRepresentable.swift */; };
+		97B015612B1359DB00306A5B /* Synth.aif in Resources */ = {isa = PBXBuildFile; fileRef = 97B015602B1359DB00306A5B /* Synth.aif */; };
+		97B015632B1359DB00306A5B /* SimplePlayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015622B1359DB00306A5B /* SimplePlayEngine.swift */; };
+		97B015652B1359DB00306A5B /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015642B1359DB00306A5B /* TypeAliases.swift */; };
+		97B015682B1359DB00306A5B /* StringHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015672B1359DB00306A5B /* StringHelpers.swift */; };
+		97B0156B2B1359DB00306A5B /* MIDIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B0156A2B1359DB00306A5B /* MIDIManager.swift */; };
+		97B0156E2B1359DB00306A5B /* AudioUnitHostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B0156D2B1359DB00306A5B /* AudioUnitHostModel.swift */; };
+		97B015702B1359DB00306A5B /* AudioUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B0156F2B1359DB00306A5B /* AudioUnitViewModel.swift */; };
+		97B015722B1359DB00306A5B /* SwiftRustAudioExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015712B1359DB00306A5B /* SwiftRustAudioExampleApp.swift */; };
+		97B015742B1359DD00306A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B015732B1359DD00306A5B /* Assets.xcassets */; };
+		97B015772B1359DD00306A5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B015762B1359DD00306A5B /* Preview Assets.xcassets */; };
+		97B015822B1359DD00306A5B /* SwiftRustAudioExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015812B1359DD00306A5B /* SwiftRustAudioExampleTests.swift */; };
+		97B0158C2B1359DD00306A5B /* SwiftRustAudioExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B0158B2B1359DD00306A5B /* SwiftRustAudioExampleUITests.swift */; };
+		97B0158E2B1359DD00306A5B /* SwiftRustAudioExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B0158D2B1359DD00306A5B /* SwiftRustAudioExampleUITestsLaunchTests.swift */; };
+		97B015942B1359DD00306A5B /* SwiftRustAudioExampleExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 97B015932B1359DD00306A5B /* SwiftRustAudioExampleExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		97B015992B1359DD00306A5B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 97B015982B1359DD00306A5B /* README.md */; };
+		97B0159E2B1359DD00306A5B /* ParameterSpecBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B0159D2B1359DD00306A5B /* ParameterSpecBase.swift */; };
+		97B015A12B1359DD00306A5B /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015A02B1359DD00306A5B /* CrossPlatform.swift */; };
+		97B015A32B1359DD00306A5B /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015A22B1359DD00306A5B /* String+Utils.swift */; };
+		97B015A72B1359DD00306A5B /* SwiftRustAudioExampleExtensionAudioUnit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97B015A62B1359DD00306A5B /* SwiftRustAudioExampleExtensionAudioUnit.mm */; };
+		97B015AA2B1359DD00306A5B /* SwiftRustAudioExampleExtensionAUProcessHelper.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 97B015A92B1359DD00306A5B /* SwiftRustAudioExampleExtensionAUProcessHelper.hpp */; };
+		97B015AE2B1359DD00306A5B /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015AD2B1359DD00306A5B /* Parameters.swift */; };
+		97B015B22B1359DD00306A5B /* SwiftRustAudioExampleExtensionDSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 97B015B12B1359DD00306A5B /* SwiftRustAudioExampleExtensionDSPKernel.hpp */; };
+		97B015B52B1359DD00306A5B /* SwiftRustAudioExampleExtensionMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015B42B1359DD00306A5B /* SwiftRustAudioExampleExtensionMainView.swift */; };
+		97B015B72B1359DD00306A5B /* ParameterSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015B62B1359DD00306A5B /* ParameterSlider.swift */; };
+		97B015BC2B1359DD00306A5B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B015BA2B1359DD00306A5B /* MainInterface.storyboard */; };
+		97B015BE2B1359DD00306A5B /* ObservableAUParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015BD2B1359DD00306A5B /* ObservableAUParameter.swift */; };
+		97B015C02B1359DD00306A5B /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B015BF2B1359DD00306A5B /* AudioUnitViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97B0157E2B1359DD00306A5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97B0154E2B1359DB00306A5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97B015552B1359DB00306A5B;
+			remoteInfo = SwiftRustAudioExample;
+		};
+		97B015882B1359DD00306A5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97B0154E2B1359DB00306A5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97B015552B1359DB00306A5B;
+			remoteInfo = SwiftRustAudioExample;
+		};
+		97B015952B1359DD00306A5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97B0154E2B1359DB00306A5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97B015922B1359DD00306A5B;
+			remoteInfo = SwiftRustAudioExampleExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		97B015C72B1359DD00306A5B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				97B015942B1359DD00306A5B /* SwiftRustAudioExampleExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		97B015562B1359DB00306A5B /* SwiftRustAudioExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftRustAudioExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97B015592B1359DB00306A5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97B0155D2B1359DB00306A5B /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		97B015602B1359DB00306A5B /* Synth.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Synth.aif; sourceTree = "<group>"; };
+		97B015622B1359DB00306A5B /* SimplePlayEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayEngine.swift; sourceTree = "<group>"; };
+		97B015642B1359DB00306A5B /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		97B015672B1359DB00306A5B /* StringHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelpers.swift; sourceTree = "<group>"; };
+		97B0156A2B1359DB00306A5B /* MIDIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIManager.swift; sourceTree = "<group>"; };
+		97B0156D2B1359DB00306A5B /* AudioUnitHostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitHostModel.swift; sourceTree = "<group>"; };
+		97B0156F2B1359DB00306A5B /* AudioUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewModel.swift; sourceTree = "<group>"; };
+		97B015712B1359DB00306A5B /* SwiftRustAudioExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRustAudioExampleApp.swift; sourceTree = "<group>"; };
+		97B015732B1359DD00306A5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97B015762B1359DD00306A5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		97B015782B1359DD00306A5B /* SwiftRustAudioExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftRustAudioExample.entitlements; sourceTree = "<group>"; };
+		97B0157D2B1359DD00306A5B /* SwiftRustAudioExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftRustAudioExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97B015812B1359DD00306A5B /* SwiftRustAudioExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRustAudioExampleTests.swift; sourceTree = "<group>"; };
+		97B015872B1359DD00306A5B /* SwiftRustAudioExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftRustAudioExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97B0158B2B1359DD00306A5B /* SwiftRustAudioExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRustAudioExampleUITests.swift; sourceTree = "<group>"; };
+		97B0158D2B1359DD00306A5B /* SwiftRustAudioExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRustAudioExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		97B015932B1359DD00306A5B /* SwiftRustAudioExampleExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftRustAudioExampleExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		97B015982B1359DD00306A5B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		97B0159B2B1359DD00306A5B /* SwiftRustAudioExampleExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftRustAudioExampleExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		97B0159D2B1359DD00306A5B /* ParameterSpecBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterSpecBase.swift; sourceTree = "<group>"; };
+		97B015A02B1359DD00306A5B /* CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatform.swift; sourceTree = "<group>"; };
+		97B015A22B1359DD00306A5B /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		97B015A52B1359DD00306A5B /* SwiftRustAudioExampleExtensionAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftRustAudioExampleExtensionAudioUnit.h; sourceTree = "<group>"; };
+		97B015A62B1359DD00306A5B /* SwiftRustAudioExampleExtensionAudioUnit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SwiftRustAudioExampleExtensionAudioUnit.mm; sourceTree = "<group>"; };
+		97B015A92B1359DD00306A5B /* SwiftRustAudioExampleExtensionAUProcessHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SwiftRustAudioExampleExtensionAUProcessHelper.hpp; sourceTree = "<group>"; };
+		97B015AC2B1359DD00306A5B /* SwiftRustAudioExampleExtensionParameterAddresses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftRustAudioExampleExtensionParameterAddresses.h; sourceTree = "<group>"; };
+		97B015AD2B1359DD00306A5B /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		97B015B02B1359DD00306A5B /* SinOscillator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SinOscillator.h; sourceTree = "<group>"; };
+		97B015B12B1359DD00306A5B /* SwiftRustAudioExampleExtensionDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SwiftRustAudioExampleExtensionDSPKernel.hpp; sourceTree = "<group>"; };
+		97B015B42B1359DD00306A5B /* SwiftRustAudioExampleExtensionMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRustAudioExampleExtensionMainView.swift; sourceTree = "<group>"; };
+		97B015B62B1359DD00306A5B /* ParameterSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterSlider.swift; sourceTree = "<group>"; };
+		97B015BB2B1359DD00306A5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		97B015BD2B1359DD00306A5B /* ObservableAUParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableAUParameter.swift; sourceTree = "<group>"; };
+		97B015BF2B1359DD00306A5B /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
+		97B015C12B1359DD00306A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97B015532B1359DB00306A5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97B0157A2B1359DD00306A5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97B015842B1359DD00306A5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97B015902B1359DD00306A5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97B0154D2B1359DB00306A5B = {
+			isa = PBXGroup;
+			children = (
+				97B015582B1359DB00306A5B /* SwiftRustAudioExample */,
+				97B015802B1359DD00306A5B /* SwiftRustAudioExampleTests */,
+				97B0158A2B1359DD00306A5B /* SwiftRustAudioExampleUITests */,
+				97B015972B1359DD00306A5B /* SwiftRustAudioExampleExtension */,
+				97B015572B1359DB00306A5B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		97B015572B1359DB00306A5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97B015562B1359DB00306A5B /* SwiftRustAudioExample.app */,
+				97B0157D2B1359DD00306A5B /* SwiftRustAudioExampleTests.xctest */,
+				97B015872B1359DD00306A5B /* SwiftRustAudioExampleUITests.xctest */,
+				97B015932B1359DD00306A5B /* SwiftRustAudioExampleExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97B015582B1359DB00306A5B /* SwiftRustAudioExample */ = {
+			isa = PBXGroup;
+			children = (
+				97B015592B1359DB00306A5B /* ContentView.swift */,
+				97B015712B1359DB00306A5B /* SwiftRustAudioExampleApp.swift */,
+				97B015732B1359DD00306A5B /* Assets.xcassets */,
+				97B015782B1359DD00306A5B /* SwiftRustAudioExample.entitlements */,
+				97B0155B2B1359DB00306A5B /* Common */,
+				97B0156C2B1359DB00306A5B /* Model */,
+				97B015752B1359DD00306A5B /* Preview Content */,
+			);
+			path = SwiftRustAudioExample;
+			sourceTree = "<group>";
+		};
+		97B0155B2B1359DB00306A5B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				97B015642B1359DB00306A5B /* TypeAliases.swift */,
+				97B0155C2B1359DB00306A5B /* UI */,
+				97B0155F2B1359DB00306A5B /* Audio */,
+				97B015662B1359DB00306A5B /* String */,
+				97B015692B1359DB00306A5B /* MIDI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		97B0155C2B1359DB00306A5B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				97B0155D2B1359DB00306A5B /* ViewControllerRepresentable.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		97B0155F2B1359DB00306A5B /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				97B015602B1359DB00306A5B /* Synth.aif */,
+				97B015622B1359DB00306A5B /* SimplePlayEngine.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		97B015662B1359DB00306A5B /* String */ = {
+			isa = PBXGroup;
+			children = (
+				97B015672B1359DB00306A5B /* StringHelpers.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		97B015692B1359DB00306A5B /* MIDI */ = {
+			isa = PBXGroup;
+			children = (
+				97B0156A2B1359DB00306A5B /* MIDIManager.swift */,
+			);
+			path = MIDI;
+			sourceTree = "<group>";
+		};
+		97B0156C2B1359DB00306A5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97B0156D2B1359DB00306A5B /* AudioUnitHostModel.swift */,
+				97B0156F2B1359DB00306A5B /* AudioUnitViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		97B015752B1359DD00306A5B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				97B015762B1359DD00306A5B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		97B015802B1359DD00306A5B /* SwiftRustAudioExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				97B015812B1359DD00306A5B /* SwiftRustAudioExampleTests.swift */,
+			);
+			path = SwiftRustAudioExampleTests;
+			sourceTree = "<group>";
+		};
+		97B0158A2B1359DD00306A5B /* SwiftRustAudioExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				97B0158B2B1359DD00306A5B /* SwiftRustAudioExampleUITests.swift */,
+				97B0158D2B1359DD00306A5B /* SwiftRustAudioExampleUITestsLaunchTests.swift */,
+			);
+			path = SwiftRustAudioExampleUITests;
+			sourceTree = "<group>";
+		};
+		97B015972B1359DD00306A5B /* SwiftRustAudioExampleExtension */ = {
+			isa = PBXGroup;
+			children = (
+				97B015982B1359DD00306A5B /* README.md */,
+				97B015C12B1359DD00306A5B /* Info.plist */,
+				97B0159A2B1359DD00306A5B /* Common */,
+				97B015AB2B1359DD00306A5B /* Parameters */,
+				97B015AF2B1359DD00306A5B /* DSP */,
+				97B015B32B1359DD00306A5B /* UI */,
+			);
+			path = SwiftRustAudioExampleExtension;
+			sourceTree = "<group>";
+		};
+		97B0159A2B1359DD00306A5B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				97B0159B2B1359DD00306A5B /* SwiftRustAudioExampleExtension-Bridging-Header.h */,
+				97B0159C2B1359DD00306A5B /* Parameters */,
+				97B0159F2B1359DD00306A5B /* Utility */,
+				97B015A42B1359DD00306A5B /* Audio Unit */,
+				97B015A82B1359DD00306A5B /* DSP */,
+				97B015B82B1359DD00306A5B /* UI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		97B0159C2B1359DD00306A5B /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				97B0159D2B1359DD00306A5B /* ParameterSpecBase.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		97B0159F2B1359DD00306A5B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				97B015A02B1359DD00306A5B /* CrossPlatform.swift */,
+				97B015A22B1359DD00306A5B /* String+Utils.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		97B015A42B1359DD00306A5B /* Audio Unit */ = {
+			isa = PBXGroup;
+			children = (
+				97B015A52B1359DD00306A5B /* SwiftRustAudioExampleExtensionAudioUnit.h */,
+				97B015A62B1359DD00306A5B /* SwiftRustAudioExampleExtensionAudioUnit.mm */,
+			);
+			path = "Audio Unit";
+			sourceTree = "<group>";
+		};
+		97B015A82B1359DD00306A5B /* DSP */ = {
+			isa = PBXGroup;
+			children = (
+				97B015A92B1359DD00306A5B /* SwiftRustAudioExampleExtensionAUProcessHelper.hpp */,
+			);
+			path = DSP;
+			sourceTree = "<group>";
+		};
+		97B015AB2B1359DD00306A5B /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				97B015AC2B1359DD00306A5B /* SwiftRustAudioExampleExtensionParameterAddresses.h */,
+				97B015AD2B1359DD00306A5B /* Parameters.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		97B015AF2B1359DD00306A5B /* DSP */ = {
+			isa = PBXGroup;
+			children = (
+				97B015B02B1359DD00306A5B /* SinOscillator.h */,
+				97B015B12B1359DD00306A5B /* SwiftRustAudioExampleExtensionDSPKernel.hpp */,
+			);
+			path = DSP;
+			sourceTree = "<group>";
+		};
+		97B015B32B1359DD00306A5B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				97B015B42B1359DD00306A5B /* SwiftRustAudioExampleExtensionMainView.swift */,
+				97B015B62B1359DD00306A5B /* ParameterSlider.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		97B015B82B1359DD00306A5B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				97B015BD2B1359DD00306A5B /* ObservableAUParameter.swift */,
+				97B015BF2B1359DD00306A5B /* AudioUnitViewController.swift */,
+				97B015B92B1359DD00306A5B /* Base.lproj */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		97B015B92B1359DD00306A5B /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				97B015BA2B1359DD00306A5B /* MainInterface.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97B015552B1359DB00306A5B /* SwiftRustAudioExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97B015C82B1359DD00306A5B /* Build configuration list for PBXNativeTarget "SwiftRustAudioExample" */;
+			buildPhases = (
+				97B015522B1359DB00306A5B /* Sources */,
+				97B015532B1359DB00306A5B /* Frameworks */,
+				97B015542B1359DB00306A5B /* Resources */,
+				97B015C72B1359DD00306A5B /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97B015962B1359DD00306A5B /* PBXTargetDependency */,
+			);
+			name = SwiftRustAudioExample;
+			productName = SwiftRustAudioExample;
+			productReference = 97B015562B1359DB00306A5B /* SwiftRustAudioExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		97B0157C2B1359DD00306A5B /* SwiftRustAudioExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97B015CB2B1359DD00306A5B /* Build configuration list for PBXNativeTarget "SwiftRustAudioExampleTests" */;
+			buildPhases = (
+				97B015792B1359DD00306A5B /* Sources */,
+				97B0157A2B1359DD00306A5B /* Frameworks */,
+				97B0157B2B1359DD00306A5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97B0157F2B1359DD00306A5B /* PBXTargetDependency */,
+			);
+			name = SwiftRustAudioExampleTests;
+			productName = SwiftRustAudioExampleTests;
+			productReference = 97B0157D2B1359DD00306A5B /* SwiftRustAudioExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		97B015862B1359DD00306A5B /* SwiftRustAudioExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97B015CE2B1359DD00306A5B /* Build configuration list for PBXNativeTarget "SwiftRustAudioExampleUITests" */;
+			buildPhases = (
+				97B015832B1359DD00306A5B /* Sources */,
+				97B015842B1359DD00306A5B /* Frameworks */,
+				97B015852B1359DD00306A5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97B015892B1359DD00306A5B /* PBXTargetDependency */,
+			);
+			name = SwiftRustAudioExampleUITests;
+			productName = SwiftRustAudioExampleUITests;
+			productReference = 97B015872B1359DD00306A5B /* SwiftRustAudioExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		97B015922B1359DD00306A5B /* SwiftRustAudioExampleExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97B015C42B1359DD00306A5B /* Build configuration list for PBXNativeTarget "SwiftRustAudioExampleExtension" */;
+			buildPhases = (
+				97B0158F2B1359DD00306A5B /* Sources */,
+				97B015902B1359DD00306A5B /* Frameworks */,
+				97B015912B1359DD00306A5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftRustAudioExampleExtension;
+			productName = SwiftRustAudioExampleExtension;
+			productReference = 97B015932B1359DD00306A5B /* SwiftRustAudioExampleExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97B0154E2B1359DB00306A5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					97B015552B1359DB00306A5B = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					97B0157C2B1359DD00306A5B = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 97B015552B1359DB00306A5B;
+					};
+					97B015862B1359DD00306A5B = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 97B015552B1359DB00306A5B;
+					};
+					97B015922B1359DD00306A5B = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 97B015512B1359DB00306A5B /* Build configuration list for PBXProject "SwiftRustAudioExample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97B0154D2B1359DB00306A5B;
+			productRefGroup = 97B015572B1359DB00306A5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97B015552B1359DB00306A5B /* SwiftRustAudioExample */,
+				97B0157C2B1359DD00306A5B /* SwiftRustAudioExampleTests */,
+				97B015862B1359DD00306A5B /* SwiftRustAudioExampleUITests */,
+				97B015922B1359DD00306A5B /* SwiftRustAudioExampleExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97B015542B1359DB00306A5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97B015742B1359DD00306A5B /* Assets.xcassets in Resources */,
+				97B015772B1359DD00306A5B /* Preview Assets.xcassets in Resources */,
+				97B015612B1359DB00306A5B /* Synth.aif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97B0157B2B1359DD00306A5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97B015852B1359DD00306A5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97B015912B1359DD00306A5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97B015AA2B1359DD00306A5B /* SwiftRustAudioExampleExtensionAUProcessHelper.hpp in Resources */,
+				97B015BC2B1359DD00306A5B /* MainInterface.storyboard in Resources */,
+				97B015B22B1359DD00306A5B /* SwiftRustAudioExampleExtensionDSPKernel.hpp in Resources */,
+				97B015992B1359DD00306A5B /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97B015522B1359DB00306A5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97B0156E2B1359DB00306A5B /* AudioUnitHostModel.swift in Sources */,
+				97B015702B1359DB00306A5B /* AudioUnitViewModel.swift in Sources */,
+				97B015682B1359DB00306A5B /* StringHelpers.swift in Sources */,
+				97B015652B1359DB00306A5B /* TypeAliases.swift in Sources */,
+				97B0156B2B1359DB00306A5B /* MIDIManager.swift in Sources */,
+				97B0155A2B1359DB00306A5B /* ContentView.swift in Sources */,
+				97B0155E2B1359DB00306A5B /* ViewControllerRepresentable.swift in Sources */,
+				97B015722B1359DB00306A5B /* SwiftRustAudioExampleApp.swift in Sources */,
+				97B015632B1359DB00306A5B /* SimplePlayEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97B015792B1359DD00306A5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97B015822B1359DD00306A5B /* SwiftRustAudioExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97B015832B1359DD00306A5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97B0158E2B1359DD00306A5B /* SwiftRustAudioExampleUITestsLaunchTests.swift in Sources */,
+				97B0158C2B1359DD00306A5B /* SwiftRustAudioExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97B0158F2B1359DD00306A5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97B015AE2B1359DD00306A5B /* Parameters.swift in Sources */,
+				97B0159E2B1359DD00306A5B /* ParameterSpecBase.swift in Sources */,
+				97B015BE2B1359DD00306A5B /* ObservableAUParameter.swift in Sources */,
+				97B015A12B1359DD00306A5B /* CrossPlatform.swift in Sources */,
+				97B015B52B1359DD00306A5B /* SwiftRustAudioExampleExtensionMainView.swift in Sources */,
+				97B015C02B1359DD00306A5B /* AudioUnitViewController.swift in Sources */,
+				97B015B72B1359DD00306A5B /* ParameterSlider.swift in Sources */,
+				97B015A72B1359DD00306A5B /* SwiftRustAudioExampleExtensionAudioUnit.mm in Sources */,
+				97B015A32B1359DD00306A5B /* String+Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97B0157F2B1359DD00306A5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97B015552B1359DB00306A5B /* SwiftRustAudioExample */;
+			targetProxy = 97B0157E2B1359DD00306A5B /* PBXContainerItemProxy */;
+		};
+		97B015892B1359DD00306A5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97B015552B1359DB00306A5B /* SwiftRustAudioExample */;
+			targetProxy = 97B015882B1359DD00306A5B /* PBXContainerItemProxy */;
+		};
+		97B015962B1359DD00306A5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97B015922B1359DD00306A5B /* SwiftRustAudioExampleExtension */;
+			targetProxy = 97B015952B1359DD00306A5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		97B015BA2B1359DD00306A5B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97B015BB2B1359DD00306A5B /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97B015C22B1359DD00306A5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SwiftRustAudioExample/SwiftRustAudioExample.entitlements;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		97B015C32B1359DD00306A5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SwiftRustAudioExample/SwiftRustAudioExample.entitlements;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97B015C52B1359DD00306A5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GWBH83EBX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftRustAudioExampleExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SwiftRustAudioExampleExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cp3.SwiftRustAudioExample.SwiftRustAudioExampleExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftRustAudioExampleExtension/Common/SwiftRustAudioExampleExtension-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97B015C62B1359DD00306A5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GWBH83EBX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftRustAudioExampleExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SwiftRustAudioExampleExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cp3.SwiftRustAudioExample.SwiftRustAudioExampleExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftRustAudioExampleExtension/Common/SwiftRustAudioExampleExtension-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		97B015C92B1359DD00306A5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftRustAudioExample/Preview Content\"";
+				DEVELOPMENT_TEAM = 5GWBH83EBX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cp3.SwiftRustAudioExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97B015CA2B1359DD00306A5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftRustAudioExample/Preview Content\"";
+				DEVELOPMENT_TEAM = 5GWBH83EBX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cp3.SwiftRustAudioExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		97B015CC2B1359DD00306A5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GWBH83EBX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cp3.SwiftRustAudioExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftRustAudioExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftRustAudioExample";
+			};
+			name = Debug;
+		};
+		97B015CD2B1359DD00306A5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GWBH83EBX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cp3.SwiftRustAudioExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftRustAudioExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftRustAudioExample";
+			};
+			name = Release;
+		};
+		97B015CF2B1359DD00306A5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GWBH83EBX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cp3.SwiftRustAudioExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftRustAudioExample;
+			};
+			name = Debug;
+		};
+		97B015D02B1359DD00306A5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GWBH83EBX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cp3.SwiftRustAudioExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftRustAudioExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97B015512B1359DB00306A5B /* Build configuration list for PBXProject "SwiftRustAudioExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97B015C22B1359DD00306A5B /* Debug */,
+				97B015C32B1359DD00306A5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97B015C42B1359DD00306A5B /* Build configuration list for PBXNativeTarget "SwiftRustAudioExampleExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97B015C52B1359DD00306A5B /* Debug */,
+				97B015C62B1359DD00306A5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97B015C82B1359DD00306A5B /* Build configuration list for PBXNativeTarget "SwiftRustAudioExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97B015C92B1359DD00306A5B /* Debug */,
+				97B015CA2B1359DD00306A5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97B015CB2B1359DD00306A5B /* Build configuration list for PBXNativeTarget "SwiftRustAudioExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97B015CC2B1359DD00306A5B /* Debug */,
+				97B015CD2B1359DD00306A5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97B015CE2B1359DD00306A5B /* Build configuration list for PBXNativeTarget "SwiftRustAudioExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97B015CF2B1359DD00306A5B /* Debug */,
+				97B015D02B1359DD00306A5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97B0154E2B1359DB00306A5B /* Project object */;
+}
