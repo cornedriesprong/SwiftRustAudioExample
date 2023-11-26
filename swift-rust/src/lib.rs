@@ -1,46 +1,37 @@
-use std::os::raw::{c_int, c_uint, c_void};
+use std::os::raw::c_float;
 
-#[repr(C)]
-#[allow(nonstandard_style, clippy::upper_case_acronyms)]
-pub struct AudioBuffer {
-    pub mNumberChannels: c_uint,
-    pub mDataByteSize: c_uint,
-    pub mData: *mut c_void,
+pub struct Sine {
+    frequency: f32,
+    sample_rate: f32,
+    phase: f32,
 }
 
-#[repr(C)]
-#[allow(nonstandard_style, clippy::upper_case_acronyms)]
-pub struct AudioBufferList {
-    pub mNumberBuffers: c_uint,
-    pub mBuffers: [AudioBuffer; 128],
+impl Sine {
+    pub fn new(frequency: f32, sample_rate: f32) -> Self {
+        Self {
+            frequency,
+            sample_rate,
+            phase: 0.0,
+        }
+    }
+
+    #[inline]
+    pub fn render(&mut self) -> f32 {
+        let value =
+            (self.phase * self.frequency * 2.0 * std::f32::consts::PI / self.sample_rate).sin();
+        self.phase = (self.phase + 1.0) % self.sample_rate;
+        value
+    }
 }
 
 #[no_mangle]
-pub extern "C" fn render(output: &mut AudioBufferList, frame_count: usize) -> i32 {
-    let buffer_l = &mut output.mBuffers[0];
-    let data_l = unsafe {
-        let data_slice = std::slice::from_raw_parts_mut(
-            buffer_l.mData as *mut f32,
-            buffer_l.mDataByteSize as usize / std::mem::size_of::<f32>(),
-        );
-        data_slice
-    };
-    let buffer_r = &mut output.mBuffers[1];
-    let data_r = unsafe {
-        let data_slice = std::slice::from_raw_parts_mut(
-            buffer_r.mData as *mut f32,
-            buffer_r.mDataByteSize as usize / std::mem::size_of::<f32>(),
-        );
-        data_slice
-    };
+pub extern "C" fn sine_init(sample_rate: f32) -> Box<Sine> {
+    let sine = Sine::new(440.0, sample_rate);
 
-    let mut data = vec![0.0; frame_count];
-    // engine.render(&mut data, frame_count);
+    return Box::new(sine);
+}
 
-    for ((l, r), d) in data_l.iter_mut().zip(data_r.iter_mut()).zip(data) {
-        *l = d;
-        *r = d;
-    }
-
-    return 0;
+#[no_mangle]
+pub extern "C" fn render(sine: &mut Sine) -> c_float {
+    sine.render()
 }
