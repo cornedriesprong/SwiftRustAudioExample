@@ -13,6 +13,7 @@
 #import "SwiftRustAudioExampleExtensionAUProcessHelper.hpp"
 #import "SwiftRustAudioExampleExtensionDSPKernel.hpp"
 
+#import "swift-rust-ffi.h"
 
 // Define parameter addresses.
 
@@ -28,6 +29,7 @@
     // C++ members need to be ivars; they would be copied on access if they were properties.
     SwiftRustAudioExampleExtensionDSPKernel _kernel;
     std::unique_ptr<AUProcessHelper> _processHelper;
+    Sine* _sine;
 }
 
 @synthesize parameterTree = _parameterTree;
@@ -38,6 +40,8 @@
     if (self == nil) { return nil; }
 
     [self setupAudioBuses];
+    
+    _sine = sine_init(self.outputBus.format.sampleRate);
 
     return self;
 }
@@ -155,25 +159,11 @@
                               const AURenderEvent        				*realtimeEventListHead,
                               AURenderPullInputBlock __unsafe_unretained pullInputBlock) {
 
-        if (frameCount > kernel->maximumFramesToRender()) {
-            return kAudioUnitErr_TooManyFramesToProcess;
+        for (AVAudioFrameCount i = 0; i < frameCount; ++i) {
+            float s = render(self->_sine);
+            ((float*)outputData->mBuffers[0].mData)[i] = s;
+            ((float*)outputData->mBuffers[1].mData)[i] = s;
         }
-
-        /*
-         Important:
-         If the caller passed non-null output pointers (outputData->mBuffers[x].mData), use those.
-
-         If the caller passed null output buffer pointers, process in memory owned by the Audio Unit
-         and modify the (outputData->mBuffers[x].mData) pointers to point to this owned memory.
-         The Audio Unit is responsible for preserving the validity of this memory until the next call to render,
-         or deallocateRenderResources is called.
-
-         If your algorithm cannot process in-place, you will need to preallocate an output buffer
-         and use it here.
-
-         See the description of the canProcessInPlace property.
-         */
-        processHelper->processWithEvents(outputData, timestamp, frameCount, realtimeEventListHead);
 
         return noErr;
     };
