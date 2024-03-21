@@ -533,8 +533,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash ${PROJECT_DIR}/bin/compile-library.sh swift-rust $buildvariant\n";
+			shellPath = /bin/zsh;
+			shellScript = "export PATH=\"$HOME/.cargo/bin:$PATH\"\nsource ~/.zshrc\nrustup target add aarch64-apple-ios\nrustup target add aarch64-apple-ios-sim\nzsh ${PROJECT_DIR}/bin/compile-library.sh swift-rust $buildvariant\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
